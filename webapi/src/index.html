@@ -10,19 +10,54 @@
 </head>
 
 <body>
-  <h1>List of Random Users</h1>
-  <p>Data source <a href="https://randomuser.me"><code>https://randomuser.me</code></a></p>
+  <h1>List of Player Statistics</h1>
+  <p>Data source <a
+      href="https://index.simulationhockey.com/api/v1/players/stats"><code>https://index.simulationhockey.com/api/v1/players/stats</code></a>
+  </p>
   <input id="input1" type="number" min="1" max="20" value="5">
   <input id="btn1" type="button" value="Fetch">
   <table id="mars">
     <!-- data will be generated from code -->
     <tr>
       <th>Name</th>
-      <th>Date of Birth</th>
-      <th>Photo</th>
+      <th>Games</th>
+      <th>Goals</th>
+      <th>Assists</th>
+      <th>Points</th>
     </tr>
   </table>
-  <script src="main.ts" type="module"></script>
 </body>
+
+<body>
+  <h1>Top 10: Player Attributes</h1>
+  <p>Data source <a
+      href="https://index.simulationhockey.com/api/v1/players/ratings"><code>https://index.simulationhockey.com/api/v1/players/ratings</code></a>
+  </p>
+  <label for "ratings"> Choose A Rating To Sort By:</label>
+  <select id="playerRatings" name="ratings">
+    <option value="passing">Passing</option>
+    <option value="shootingRange">Shooting Range</option>
+    <option value="shootingAccuracy">Shooting Accuracy</option>
+    <option value="checking">Checking</option>
+    <option value="stickChecking">Stick Checking</option>
+    <option value="faceoffs">Faceoffs</option>
+    <option value="speed">Speed</option>
+    <option value="strength">Strength</option>
+    <option value="fighting">Fighting</option>
+  </select>
+  
+  <input id="btn2" type="button" value="Change">
+
+  <table id="juiptor">
+    <!-- data will be generated from code -->
+    <tr>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Rating</th>
+    </tr>
+  </table>
+
+  <script src="main.ts" type="module"></script>
+
 
 </html>

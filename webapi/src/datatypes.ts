@@ -1,28 +1,33 @@
-type RandomUser = {
-  results: Array<User>;
+// Define the type User to match the JSON structure from https://randomuser.me/api
+type PlayerStats = {
+    id: number;
+    name: string;
+    position: string;
+    team: string;
+    gamesPlayed: number;
+    goals: number;
+    assists: number;
+    points: number;
+    plusMinus: number;
+    pim: number;
+    fights: number;
+    hits: number;
+    shotsBlocked: number;
 };
 
 // Define the type User to match the JSON structure from https://randomuser.me/api
-type User = {
-  name: {
-    first: string;
-    last: string;
-  };
-  location: {
-    coordinates: {
-      latitude: number;
-      longitude: number;
-    };
-  };
-  dob: {
-    date: string;
-    age: number;
-  };
-  picture: {
-    large: string;
-    medium: string;
-    thumbnail: string;
-  };
+type PlayerAttributes = {
+    name: string;
+    team: string;
+    passing: number;
+    shootingAccuracy: number;
+    shootingRange: number;
+    checking: number;
+    stickChecking: number;
+    faceoffs: number;
+    speed: number;
+    strength: number;
+    fighting: number;
 };
 
-export { User, RandomUser };
+export { PlayerStats, PlayerAttributes };
